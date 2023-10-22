@@ -4,7 +4,7 @@ const score = JSON.parse(localStorage.getItem("score")) || {
   Ties: 0,
 };
 
-/*************************************************************************************************/
+/*********************************************************/
 function playGame(playerMove) {
   const computerMove = pickComputerMove();
   let result = "";
@@ -51,7 +51,7 @@ function playGame(playerMove) {
  Wins: ${score.Wins}, Losses: ${score.Losses}, Ties: ${score.Ties}`
   );
 }
-/*************************************************************************************************/
+/***********************************************************/
 function pickComputerMove() {
   const randomNum = Math.random();
   let computerMove = "";
