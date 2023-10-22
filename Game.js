@@ -1,3 +1,10 @@
+const score = JSON.parse(localStorage.getItem("score")) || {
+  Wins: 0,
+  Losses: 0,
+  Ties: 0,
+};
+
+/*************************************************************************************************/
 function playGame(playerMove) {
   const computerMove = pickComputerMove();
   let result = "";
@@ -29,8 +36,19 @@ function playGame(playerMove) {
       result = "Tie";
     }
   }
+  /************* SCORE CALCULATOR **********************/
+  if (result === "You Win") {
+    score.Wins += 1;
+  } else if (result === "You Lose") {
+    score.Losses += 1;
+  } else if (result === "Tie") {
+    score.Ties += 1;
+  }
+
+  localStorage.setItem("score", JSON.stringify(score));
   alert(
-    `You picked ${playerMove}. The computer picked ${computerMove}.  ${result}!`
+    `You picked ${playerMove}. The computer picked ${computerMove}.  ${result}!
+ Wins: ${score.Wins}, Losses: ${score.Losses}, Ties: ${score.Ties}`
   );
 }
 /*************************************************************************************************/

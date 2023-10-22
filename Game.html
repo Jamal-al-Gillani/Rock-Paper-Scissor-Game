@@ -34,6 +34,17 @@
     >
       Scissor
     </button>
+    <!--    ******RESET SCORE BUTTON******   -->
+    <button
+      onclick="
+    score.Wins = 0;
+    score.Losses = 0;
+    score.Ties = 0;
+    localStorage.removeItem('score');
+    "
+    >
+      Rest Score
+    </button>
     <!-- *******************************************************************************************-->
   </body>
 </html>
