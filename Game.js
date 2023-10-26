@@ -50,9 +50,10 @@ function playGame(playerMove) {
   updateScoreElement();
   document.querySelector(".js-result").innerHTML = result;
 
-  document.querySelector(
-    ".js-moves"
-  ).innerHTML = `Your Move  "${playerMove}" - Computers Move "${computerMove}"  `;
+  document.querySelector(".js-moves").innerHTML = ` 
+  You <img src="images/${playerMove}-emoji.png" class="move-icon" />
+      <img src="images/${computerMove}-emoji.png" class="move-icon" />
+      Computer `;
 }
 /*********************************************************/
 function updateScoreElement() {

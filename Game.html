@@ -4,39 +4,40 @@
     <link rel="stylesheet" href="Game.css" />
 
     <title>Game</title>
-
-    <script src="Game.js"></script>
   </head>
   <!-- ******************************-->
   <body>
-    <p>Rock Paper Scissor</p>
+    <p class="title">Rock Paper Scissor</p>
     <!--   ******ROCK BUTTON******   -->
     <button
       onclick="
      playGame('Rock');
     "
+      class="move-button"
     >
-      Rock
+      <img src="images/rock-emoji.png" class="move-icon" />
     </button>
     <!--    ******PAPER BUTTON******   -->
     <button
       onclick="
     playGame('Paper');
     "
+      class="move-button"
     >
-      Paper
+      <img src="images/paper-emoji.png" class="move-icon" />
     </button>
     <!--    ******SCISSOR BUTTON******   -->
     <button
       onclick="
     playGame('Scissor');
     "
+      class="move-button"
     >
-      Scissor
+      <img src="images/scissor-emoji.png" class="move-icon" />
     </button>
-    <p class="js-result"></p>
+    <p class="js-result result"></p>
     <p class="js-moves"></p>
-    <p class="js-score"></p>
+    <p class="js-score score"></p>
 
     <!--    ******RESET SCORE BUTTON******   -->
     <button
@@ -47,9 +48,11 @@
     localStorage.removeItem('score');
     updateScoreElement();
     "
+      class="reset-score-button"
     >
       Rest Score
     </button>
     <!-- ********************************-->
+    <script src="Game.js"></script>
   </body>
 </html>
